@@ -26,6 +26,10 @@ opening_strike = input.price(group="ETF Opening Price"
   , title = "Opening Strike Price"
   , tooltip = "Enter in the opening price of SPY or QQQ rounded to the nearest whole number")
 
+convert_lvls_color = input(color.white
+  , group= "ETF Levels"
+  , title = "ETF Levels Color")
+
 convert_lvls_width = input.int(group="ETF Levels"
   , defval = 2
   , minval = 1 
@@ -156,23 +160,23 @@ var table InfoBox = table.new(position = tablePosition, columns = 2, rows = 2, b
 //----------------------------------------{
 plot(line_futures_vwap, color = color.aqua, linewidth = input_vwap_width, title = "Futures VWAP")
 plot(line_etf_vwap, color = color.fuchsia, linewidth = input_vwap_width, title = "ETF VWAP")
-plot(line_pt_center, color = color.white, linewidth = convert_lvls_width, title = "Starting Level")
-plot(line_pt_plus1, color = color.white, linewidth = convert_lvls_width, title = "Level +1")
-plot(line_pt_plus2, color = color.white, linewidth = convert_lvls_width, title = "Level +2")
-plot(line_pt_plus3, color = color.white, linewidth = convert_lvls_width, title = "Level +3")
-plot(line_pt_plus4, color = color.white, linewidth = convert_lvls_width, title = "Level +4")
-plot(line_pt_plus5, color = color.white, linewidth = convert_lvls_width, title = "Level +5")
-plot(line_pt_plus6, color = color.white, linewidth = convert_lvls_width, title = "Level +6")
-plot(line_pt_plus7, color = color.white, linewidth = convert_lvls_width, title = "Level +7")
-plot(line_pt_plus8, color = color.white, linewidth = convert_lvls_width, title = "Level +8")
-plot(line_pt_minus1, color = color.white, linewidth = convert_lvls_width, title = "Level -1")
-plot(line_pt_minus2, color = color.white, linewidth = convert_lvls_width, title = "Level -2")
-plot(line_pt_minus3, color = color.white, linewidth = convert_lvls_width, title = "Level -3")
-plot(line_pt_minus4, color = color.white, linewidth = convert_lvls_width, title = "Level -4")
-plot(line_pt_minus5, color = color.white, linewidth = convert_lvls_width, title = "Level -5")
-plot(line_pt_minus6, color = color.white, linewidth = convert_lvls_width, title = "Level -6")
-plot(line_pt_minus7, color = color.white, linewidth = convert_lvls_width, title = "Level -7")
-plot(line_pt_minus8, color = color.white, linewidth = convert_lvls_width, title = "Level -8")
+plot(line_pt_center, color = convert_lvls_color, linewidth = convert_lvls_width, title = "Starting Level") 
+plot(line_pt_plus1, color = convert_lvls_color, linewidth = convert_lvls_width, title = "Level +1")
+plot(line_pt_plus2, color = convert_lvls_color, linewidth = convert_lvls_width, title = "Level +2")
+plot(line_pt_plus3, color = convert_lvls_color, linewidth = convert_lvls_width, title = "Level +3")
+plot(line_pt_plus4, color = convert_lvls_color, linewidth = convert_lvls_width, title = "Level +4")
+plot(line_pt_plus5, color = convert_lvls_color, linewidth = convert_lvls_width, title = "Level +5")
+plot(line_pt_plus6, color = convert_lvls_color, linewidth = convert_lvls_width, title = "Level +6")
+plot(line_pt_plus7, color = convert_lvls_color, linewidth = convert_lvls_width, title = "Level +7")
+plot(line_pt_plus8, color = convert_lvls_color, linewidth = convert_lvls_width, title = "Level +8")
+plot(line_pt_minus1, color = convert_lvls_color, linewidth = convert_lvls_width, title = "Level -1")
+plot(line_pt_minus2, color = convert_lvls_color, linewidth = convert_lvls_width, title = "Level -2")
+plot(line_pt_minus3, color = convert_lvls_color, linewidth = convert_lvls_width, title = "Level -3")
+plot(line_pt_minus4, color = convert_lvls_color, linewidth = convert_lvls_width, title = "Level -4")
+plot(line_pt_minus5, color = convert_lvls_color, linewidth = convert_lvls_width, title = "Level -5")
+plot(line_pt_minus6, color = convert_lvls_color, linewidth = convert_lvls_width, title = "Level -6")
+plot(line_pt_minus7, color = convert_lvls_color, linewidth = convert_lvls_width, title = "Level -7")
+plot(line_pt_minus8, color = convert_lvls_color, linewidth = convert_lvls_width, title = "Level -8")
 
 //----------------------------------------}
 //Populate Table
